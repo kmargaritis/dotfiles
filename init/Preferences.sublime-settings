@@ -139,8 +139,8 @@
     ],
     "tern_command":
     [
-        "/usr/local/bin/node",
-        "/usr/local/bin/tern"
+        "/opt/homebrew/bin/node",
+        "/opt/homebrew/bin/tern"
     ],
     "theme": "Cobalt2.sublime-theme",
     "translate_tabs_to_spaces": true,

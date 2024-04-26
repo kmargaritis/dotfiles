@@ -7,8 +7,7 @@
 apps=(
   teamviewer
   anydesk
-  google-drive-file-stream
-  google-backup-and-sync
+  #google-backup-and-sync
   alfred
   qlcolorcode
   qlstephen
@@ -16,10 +15,12 @@ apps=(
   quicklook-json
   qlprettypatch
   quicklook-csv
-  #betterzipql
+  betterzip
   qlimagesize
+  suspicious-package
   webpquicklook
-  hyperswitch
+  apparency
+  #hyperswitch
   dropbox
   google-chrome
   google-chrome-canary
@@ -30,22 +31,23 @@ apps=(
   opera
   slack
   #hipchat
-  gitter
+  #gitter
   skype
   spotify
   appcleaner
   karabiner-elements
-  flash-player
+  #flash-player
   iterm2
-  shiori
-  atom
+  #shiori
+  #atom
   sublime-text
   visual-studio-code
   texmaker
   yemuzip
   #jeromelebel-mongohub
   mysqlworkbench
-  sequel-pro
+  #sequel-pro
+  sequel-ace
   mamp
   cyberduck
   transmission
@@ -56,14 +58,13 @@ apps=(
   github
   # java
   # java11
-  adoptopenjdk10
-  adoptopenjdk9
-  adoptopenjdk8
-  java6
+  temurin
+  #java6
   sourcetree
   #flashlight
   fluid
-  spectacle
+  #spectacle
+  rectangle
   docker
   xquartz
   font-inconsolata
@@ -74,11 +75,11 @@ apps=(
   font-source-code-pro-for-powerline
   gas-mask
   # soundnode
-  virtualbox
+  #virtualbox
+  utm
   # tunnelblick
   vagrant
   vagrant-manager
-  # suspicious-package
   # slate
   # bee (if available)
   # Majic (attlasian)
@@ -87,6 +88,14 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "installing apps..."
-brew install --cask --appdir="/Applications" ${apps[@]}
+brew install --cask --no-quarantine --appdir="/Applications" ${apps[@]}
 
 brew cleanup
+
+
+# brew tap homebrew/cask-versions
+
+
+# xattr -r ~/Library/QuickLook
+
+# xattr -d -r com.apple.quarantine ~/Library/QuickLook

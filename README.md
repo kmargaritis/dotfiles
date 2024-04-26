@@ -23,6 +23,10 @@ git clone https://github.com/margaritis/dotfiles.git && cd dotfiles && source bo
 To update, `cd` into your local `dotfiles` repository and then:
 
 ```bash
+chsh -s /bin/bash
+```
+
+```bash
 source bootstrap.sh
 ```
 

@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="/usr/local/sbin:$HOME/bin:$HOME/.rvm/bin:$HOME/.jenv/bin:$PATH";
+export PATH="/opt/homebrew/sbin:$HOME/bin:$HOME/.rvm/bin:$HOME/.jenv/bin:/opt/homebrew/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -33,7 +33,7 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+if type _git &> /dev/null && [ -f /opt/homebrew/etc/bash_completion.d/git-completion.bash ]; then
 	complete -o default -o nospace -F _git g;
 fi;
 
@@ -78,7 +78,7 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache;
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Add virtualenvwrapper for managing virtualenv
-source /usr/local/bin/virtualenvwrapper.sh
+source /opt/homebrew/bin/virtualenvwrapper.sh
 
 # Set venv as working virtual env
 workon venv
@@ -110,11 +110,11 @@ source ~/init/git/git-flow-completion.sh
 
 if [ "$TERM_PROGRAM" == "iTerm.app" ]; then
     # Powerline feature for Bash
-    if [ -d "$VIRTUAL_ENV/lib/python3.9/site-packages/powerline" ]; then
+    if [ -d "$VIRTUAL_ENV/lib/python3.12/site-packages/powerline" ]; then
         powerline-daemon -q
         POWERLINE_BASH_CONTINUATION=1
         POWERLINE_BASH_SELECT=1
-        source $HOME/.virtualenvs/venv/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
+        source $HOME/.virtualenvs/venv/lib/python3.12/site-packages/powerline/bindings/bash/powerline.sh
     fi
 fi
 

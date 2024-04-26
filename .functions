@@ -199,11 +199,11 @@ function tre() {
 }
 
 function updateShells(){
-    if  ! grep -Fxq "/usr/local/bin/bash" /etc/shells ; then
-        echo "/usr/local/bin/bash" | sudo tee -a /etc/shells > /dev/null
-        chsh -s /usr/local/bin/bash
+    if  ! grep -Fxq "/opt/homebrew/bin/bash" /etc/shells ; then
+        echo "/opt/homebrew/bin/bash" | sudo tee -a /etc/shells > /dev/null
+        chsh -s /opt/homebrew/bin/bash
     else
-    	chsh -s /usr/local/bin/bash
+    	chsh -s /opt/homebrew/bin/bash
     fi
 }
 

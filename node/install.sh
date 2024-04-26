@@ -10,20 +10,20 @@ export NVM_DIR=~/.nvm;
 
 # Install node & npm packages for 0.12.6
 
-nvm install lts/argon
+nvm install lts/gallium
 
-nvm install lts/boron
+nvm install lts/hydrogen
 
-nvm install lts/carbon
+nvm install lts/iron
 source ./node/npm.sh;
 
-nvm install lts/dubnium
+nvm install 22.0.0
 
-nvm use lts/carbon
-nvm alias default lts/carbon
+nvm use lts/iron
+nvm alias default lts/iron
 
-ln -sf `which node` /usr/local/bin/node
-ln -sf `which jshint` /usr/local/bin/jshint
-ln -sf `which tern` /usr/local/bin/tern
-ln -sf `which grunt` /usr/local/bin/grunt
-ln -sf `which pug-lint` /usr/local/bin/pug-lint
+ln -sf `which node` /opt/homebrew/bin/node
+ln -sf `which jshint` /opt/homebrew/bin/jshint
+ln -sf `which tern` /opt/homebrew/bin/tern
+ln -sf `which grunt` /opt/homebrew/bin/grunt
+ln -sf `which pug-lint` /opt/homebrew/bin/pug-lint

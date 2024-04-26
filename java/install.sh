@@ -16,8 +16,8 @@ jenv enable-plugin maven
 
 source ./.functions
 
-addJavaToJenv /System/Library/Java/JavaVirtualMachines/
+# addJavaToJenv /System/Library/Java/JavaVirtualMachines/
 addJavaToJenv /Library/Java/JavaVirtualMachines/
 
-jenv global 1.8.0.45
-jenv shell 1.8.0.45
+jenv global 22.0.1
+jenv shell 22.0.1
